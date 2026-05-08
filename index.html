@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Client 1 - EMQX MQTT</title>
+  <title>Web Client 2 - EMQX MQTT</title>
   <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
   <style>
 
@@ -79,17 +79,17 @@
       font-weight: bold;
     }
 
-    h1 { color: #2563eb; }
-    button { background: #2563eb; }
-    button:hover { background: #1d4ed8; }
-    .messages { background: #eff6ff; }
+    h1 { color: #059669; }
+    button { background: #059669; }
+    button:hover { background: #047857; }
+    .messages { background: #ecfdf5; }
     .status.connected { color: #15803d; }
     .status.disconnected { color: #dc2626; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Web Client 1</h1>
+    <h1>Web Client 2</h1>
 
     <div class="info">
       <b>Broker:</b> EMQX<br />
@@ -118,7 +118,7 @@
       status.className = "status connected";
 
       client.subscribe(topic);
-      addMessage("System", "Web Client 1 підключено до EMQX broker");
+      addMessage("System", "Web Client 2 підключено до EMQX broker");
     });
 
     client.on("reconnect", () => {
@@ -146,7 +146,7 @@
       }
 
       const payload = JSON.stringify({
-        sender: "Web Client 1",
+        sender: "Web Client 2",
         message: text,
         time: new Date().toLocaleTimeString()
       });
